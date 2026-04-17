@@ -107,6 +107,7 @@ Contributions are welcome! Please follow these guidelines:
 This project is provided as-is for educational and academic purposes.
 
 ## Author
+**Rohit Jograjiya**
 **Ajay Kateshiya**
 - GitHub: [@kateshiyaajayh](https://github.com/kateshiyaajayh)
 
