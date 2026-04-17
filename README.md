@@ -130,6 +130,10 @@ This project is provided as-is for educational and academic purposes.
 ### 🛒 Cart Screen
 ![Cart](screenshots/cart.png)
 
+
+### 🛒 profile Screen
+![profile](screenshots/profile.png)
+
 ## Support & Questions
 For questions or issues, please create an issue in the repository or contact the maintainer.
 
