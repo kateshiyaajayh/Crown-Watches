@@ -110,6 +110,26 @@ This project is provided as-is for educational and academic purposes.
 **Ajay Kateshiya**
 - GitHub: [@kateshiyaajayh](https://github.com/kateshiyaajayh)
 
+  ## 📸 App Screenshots
+
+### 🏠 Home Screen
+![Home](screenshots/home.png)
+
+---
+
+### 🔐 Login Screen
+![Login](screenshots/login.png)
+
+---
+
+### 🛍️ Product Screen
+![Product](screenshots/product.png)
+
+---
+
+### 🛒 Cart Screen
+![Cart](screenshots/cart.png)
+
 ## Support & Questions
 For questions or issues, please create an issue in the repository or contact the maintainer.
 
