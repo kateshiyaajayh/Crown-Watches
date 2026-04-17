@@ -1,0 +1,38 @@
+# Gradle files
+.gradle
+/build
+/gradle
+
+# Local configuration file (SDK & NDK location)
+local.properties
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iml
+
+# Build directories
+/build
+/captures
+.externalNativeBuild
+.cxx
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Kotlin
+.kotlin
+
+# Local environment files (API keys, secrets)
+*.properties
+!gradle.properties
+!gradle-wrapper.properties
+
+# Google Services (if regenerated locally)
+google-services.json
+
+# ProGuard
+proguard-rules.pro

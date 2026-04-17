@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FE">
+
+    <!-- Header -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="@color/white"
+            android:elevation="2dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Checkout Details"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Step Indicator Container -->
+    <LinearLayout
+        android:id="@+id/stepContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+        <LinearLayout
+            android:id="@+id/stepIndicator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="40dp"
+            android:layout_marginTop="10dp">
+
+            <View
+                android:id="@+id/stepAddress"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_step_active" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#CCCCCC" />
+
+            <View
+                android:id="@+id/stepPayment"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_step_inactive" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="2dp"
+                android:layout_weight="1"
+                android:background="#CCCCCC" />
+
+            <View
+                android:id="@+id/stepConfirm"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/circle_step_inactive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp">
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Address" android:textSize="10sp" android:gravity="start"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Payment" android:textSize="10sp" android:gravity="center"/>
+            <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Confirm" android:textSize="10sp" android:gravity="end"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Content Area -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/stepContainer">
+
+        <!-- Address Layout -->
+        <LinearLayout
+            android:id="@+id/layoutAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etAddress"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="@color/white"
+                android:hint="Address (House No., Building, Area)"
+                android:paddingHorizontal="15dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etLocality"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="@color/white"
+                android:hint="Locality / Town"
+                android:paddingHorizontal="15dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etState"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="@color/white"
+                android:hint="State"
+                android:paddingHorizontal="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etCity"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/white"
+                    android:hint="City/District"
+                    android:paddingHorizontal="15dp" />
+
+                <EditText
+                    android:id="@+id/etPincode"
+                    android:layout_width="0dp"
+                    android:layout_height="55dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="@color/white"
+                    android:hint="Pincode"
+                    android:paddingHorizontal="15dp" />
+            </LinearLayout>
+
+            <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmitAddress"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/purple_primary"
+                android:text="Submit"
+                android:textAllCaps="false"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+        <!-- Payment Layout -->
+        <LinearLayout
+            android:id="@+id/layoutPayment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="20dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="For payment:"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvPaymentAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="₹240.55"
+                    android:textColor="@color/purple_primary"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="#EEEEEE"
+                android:padding="5dp">
+                
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSelectCreditCard"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Advance payment"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@color/purple_primary"
+                    android:textColor="@color/white"
+                    app:cornerRadius="15dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSelectCOD"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="Cash on delivery"
+                    android:textAllCaps="false"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textColor="@color/black"
+                    style="@style/Widget.MaterialComponents.Button.TextButton" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:id="@+id/layoutCreditCardFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+                    <TextView 
+                        android:id="@+id/tvAdvancePaymentDesc"
+                        android:layout_width="match_parent" 
+                        android:layout_height="wrap_content" 
+                        android:text="You will be redirected to Razorpay to complete your advance payment securely." 
+                        android:textColor="#666666" 
+                        android:padding="10dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutCODFields"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="#F2F2F2"
+                    android:padding="15dp"
+                    android:visibility="gone">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Cash on Delivery selected" android:textColor="@color/black" android:textStyle="bold" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPay"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/purple_primary"
+                android:text="Pay for the order"
+                android:textAllCaps="false"
+                app:cornerRadius="20dp" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <!-- Full Screen Success Layout -->
+    <LinearLayout
+        android:id="@+id/layoutSuccess"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:visibility="gone"
+        android:elevation="10dp">
+
+        <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <ImageView
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:background="@drawable/circle_background"
+            android:backgroundTint="#7061E7"
+            android:padding="40dp"
+            android:src="@drawable/ic_check_circle"
+            app:tint="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="Your order is confirmed"
+            android:textColor="@color/black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="Thank you for shopping with us."
+            android:textColor="#999999"
+            android:textSize="18sp"
+            android:gravity="center" />
+
+        <View android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#7061E7"
+            android:text="Continue"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:cornerRadius="35dp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

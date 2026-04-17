@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Main purple background -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#6C63FF" />
+        </shape>
+    </item>
+
+    <!-- Diagonal overlay for modern effect -->
+    <item
+        android:top="-30dp"
+        android:right="-30dp">
+        <rotate
+            android:fromDegrees="45"
+            android:pivotX="50%"
+            android:pivotY="50%">
+            <shape android:shape="rectangle">
+                <solid android:color="#6C63FF" />
+            </shape>
+        </rotate>
+    </item>
+
+    <!-- Curved bottom section for smooth transition -->
+    <item
+        android:bottom="0dp"
+        android:height="40dp">
+        <shape android:shape="rectangle">
+            <solid android:color="#6C63FF" />
+            <corners
+                android:bottomLeftRadius="30dp"
+                android:bottomRightRadius="30dp" />
+        </shape>
+    </item>
+</layer-list>
