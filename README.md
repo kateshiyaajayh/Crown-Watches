@@ -117,8 +117,8 @@ This project is provided as-is for educational and academic purposes.
 
 ---
 
-### 🔐 Login Screen
-![Login](screenshots/splash.png)
+### 🔐 Splash Screen
+![splash](screenshots/splash.png)
 
 ---
 
