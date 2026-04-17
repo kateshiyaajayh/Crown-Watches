@@ -118,12 +118,12 @@ This project is provided as-is for educational and academic purposes.
 ---
 
 ### 🔐 Login Screen
-![Login](screenshots/login.png)
+![Login](screenshots/splash.png)
 
 ---
 
 ### 🛍️ Product Screen
-![Product](screenshots/product.png)
+![Product](screenshots/shop.png)
 
 ---
 
